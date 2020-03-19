@@ -1,0 +1,13 @@
+#Activar RewriteEngine
+
+Options +FollowSymlinks
+
+RewriteEngine on
+
+RewriteBase /youtube-poo-php-mysql-master/Mexflix_1.0
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?url=$1 [L]
