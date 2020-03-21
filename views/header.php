@@ -10,9 +10,9 @@
     <script src="http://localhost/system/Resourse/js/jquery.validate.min.js" type="text/javascript"></script>
     <script src="http://localhost/system/Resourse/js/funciones.js" type="text/javascript"></script>
     <script src="http://localhost/system/Resourse/js/Usuarios.js" type="text/javascript"></script>
-    <script src="http://localhost/system/Resourse/js/app.js" type="text/javascript"></script>
+    <script src="./Resourse/js/app.js" type="text/javascript"></script>
     <script src="http://localhost/system/Resourse/materialize/js/materialize.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="http://localhost/system/Resourse/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./Resourse/materialize/css/materialize.min.css">
     
     <style>
         body{
