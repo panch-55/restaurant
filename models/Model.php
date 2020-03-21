@@ -4,7 +4,7 @@ abstract class Model {
 	//Atributos
 	private static $db_host = '192.168.1.67';
 	private static $db_user = 'root';
-	private static $db_pass = '';
+	private static $db_pass = '1234';
 	private static $db_name = 'db_restaurant';
 	private static $db_charset = 'utf8';
 	private $conn;
