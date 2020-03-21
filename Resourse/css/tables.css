@@ -1,0 +1,14 @@
+    table {
+        border: 1px solid black;
+    }
+    
+    th {
+        font-size: 12rem;
+        border: 2px solid blue;
+    }
+    
+    tr {
+        /*border: 10px solid red;*/
+        padding: 1rem !important;
+        border: 1px solid red;
+    }
