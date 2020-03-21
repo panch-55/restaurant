@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bienvenid@s a Mexflix tus películas y series favoritas</title>
     <link rel="shortcut icon" type="image/png" href="./public/img/favicon.png">
-    <script src="http://localhost/system/Resourse/js/jquery-3.4.1.min.js" type="text/javascript"></script>
-    <script src="http://localhost/system/Resourse/js/jquery.validate.js" type="text/javascript"></script>
-    <script src="http://localhost/system/Resourse/js/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="http://localhost/system/Resourse/js/funciones.js" type="text/javascript"></script>
-    <script src="http://localhost/system/Resourse/js/Usuarios.js" type="text/javascript"></script>
+    <script src="./Resourse/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="./Resourse/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="./Resourse/js/jquery.validate.min.js" type="text/javascript"></script>
     <script src="./Resourse/js/app.js" type="text/javascript"></script>
-    <script src="http://localhost/system/Resourse/materialize/js/materialize.min.js" type="text/javascript"></script>
+    <script src="./Resourse/materialize/js/materialize.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="./Resourse/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./Resourse/css/custom.css">
+    <link rel="stylesheet" href="./Resourse/css/custom-themes.css">
+    <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/custom.js"></script>
     
     <style>
         body{
