@@ -2,7 +2,7 @@
 //Clase Abstracta que nos permitirá conectarnos a MySQL
 abstract class Model {
 	//Atributos
-	private static $db_host = '192.168.1.78';
+	private static $db_host = '192.168.1.67';
 	private static $db_user = 'root';
 	private static $db_pass = '';
 	private static $db_name = 'db_restaurant';
