@@ -3,5 +3,8 @@
     $('.sidenav').sidenav();
   });
 </script>
+
+</div>
+        </main>
   </body>
 </html>
