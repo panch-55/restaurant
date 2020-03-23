@@ -9,8 +9,8 @@ class MesasModel extends Model
     public function get($mesa = '')
     {
         $this->query = ($mesa != '')
-            ? "SELECT * FROM users WHERE user = '$mesa'"
-            : "SELECT * FROM users";
+            ? "SELECT * FROM mesas WHERE mesaId = '$mesa'"
+            : "SELECT * FROM mesas";
 
         $this->get_query();
 

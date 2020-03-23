@@ -22,11 +22,11 @@ class Router
             
             $viewController = new ViewController();
             //si se ha iniciado sesion aqui ira la programacion de nuetra web app
-            $this->url = isset($_GET["url"]) ? $_GET["url"]:"home";
+            $this->url = isset($_GET["url"]) ? $_GET["url"]:"tables";
 
             switch ($this->url) {
-                case 'home':  
-                    $viewController->loadView('home');
+                case 'tables':  
+                    $viewController->loadView('tables');
                     break;
                     case 'movieseries':
                         $viewController->loadView('movieseries');
@@ -80,12 +80,9 @@ class Router
                     $_SESSION['iniciada'] = true;
 
                     foreach ($sesion as $row) {
-                        $_SESSION['user'] = $row['user'];
-                        $_SESSION['email'] = $row['email'];
-                        $_SESSION['name'] = $row['name'];
-                        $_SESSION['birthday'] = $row['birthday'];
-                        $_SESSION['pass'] = $row['pass'];
-                        $_SESSION['role'] = $row['role'];
+                        $_SESSION['userName'] = $row['userName'];
+                        $_SESSION['nombre'] = $row['nombre'];
+                        $_SESSION['fechaRegristro'] = $row['fechaRegristro'];
                     }
 
                     header('Location: ./');
