@@ -6,12 +6,13 @@ $mesasDatos = $mesas->get();
 
 ?>
 
+<!-- START MODULE TABLES -->
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3">
         <?php
         foreach ($mesasDatos as $key) {
         ?>
-            <div class="col mb-4" id="<?php echo $key['mesaId']; ?>">
+            <div class="col mb-4 mesa" id="<?php echo $key['mesaId']; ?>">
                 <div class="card h-100">
                     <span class="cirle-notification">00:10</span>
                     <h4 class="card-title">
@@ -34,3 +35,5 @@ $mesasDatos = $mesas->get();
         ?>
     </div>
 </div>
+
+<!-- END MODULE TABLES -->

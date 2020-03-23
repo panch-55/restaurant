@@ -1,10 +1,11 @@
 <script>
-    $(document).ready(function(){
+  $(document).ready(function() {
     $('.sidenav').sidenav();
   });
 </script>
 
 </div>
-        </main>
-  </body>
+</main>
+</body>
+
 </html>

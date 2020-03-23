@@ -1,5 +1,23 @@
 $(document).ready(function() {
     loadtables();
+
+    $(".mesa").click(function() {
+        var mesaId = $(this).attr("id");
+        alert(id);
+
+        $.ajax({
+            type: "POST",
+            url: "pedidos.php",
+            data: mesaId,
+            dataType: "String"
+        });
+
+        window.location.href = "pedidos";
+
+
+
+    });
+
 });
 
 function loadtables() {
