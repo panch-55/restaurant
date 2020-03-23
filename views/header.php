@@ -12,36 +12,22 @@
 
     <title>Bienvenid@s a Mexflix tus películas y series favoritas</title>
     <link rel="shortcut icon" type="image/png" href="./public/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-          crossorigin="anonymous">
-  
-      <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
-      <link rel="stylesheet" href="assets/css/custom.css">
-      <link rel="stylesheet" href="assets/css/custom-themes.css">
-      <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
-  
-       <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="assets/js/custom.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 
-      <script src="./Resourse/js/jquery-3.4.1.min.js" type="text/javascript"></script>
-    <script src="./Resourse/js/jquery.validate.js" type="text/javascript"></script>
-    <script src="./Resourse/js/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="./Resourse/js/funciones.js" type="text/javascript"></script>
-    <script src="./Resourse/js/Usuarios.js" type="text/javascript"></script>
-    <script src="./Resourse/js/app.js" type="text/javascript"></script>
-    <script src="./Resourse/materialize/js/materialize.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="./Resourse/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="./Resourse/css/custom.css">
-    <link rel="stylesheet" href="./Resourse/css/custom-themes.css">
-    <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom-themes.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+
+     <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./Resourse/css/tables.css">
-    <script src="./Resourse/js/tables.js"></script>
+    <script src="./Resourse/js/tables.js" type="text/javascript"></script>    
 
-    <script src="Resourse/materialize/js/materialize.min.js" type="text/javascript"></script>
     <!--<link rel="stylesheet" type="text/css" href="Resourse/materialize/css/materialize.min.css">-->
     
       
@@ -54,13 +40,13 @@
             margin-top: 40px;
         }
     </style>
+
+<script type="text/javascript">
+
+});
+</script>
 </head>
 <body>
-      <?php
-        if(isset($_SESSION['userName'])){
-        echo '<a style="padding-left: 120px;" href="" class="">Usuario: '. $_SESSION['userName']."</a> ";
-        }
-      ?>
       
   <?php    
       if($_SESSION['iniciada'])
@@ -73,7 +59,7 @@
         </a>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
-                <div class="sidebar-brand text-center">
+                <div id="bar" class="sidebar-brand text-center">
                     <a href="#">Restauran bar MEXIV</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
@@ -104,12 +90,22 @@
                         <li class="header-menu">
                             <span>General</span>
                         </li>
-                        <li class="sidebar-menu">
+                        <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fas fa-exchange-alt"></i>
                                 <span>Pedidos</span>
                                 <span class="badge badge-pill badge-danger"></span>
                             </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a id="formAlta" href="pedidos">Agregar</a>
+                                    </li>
+                                    <li>
+                                        <a id="formAlta" href="#">Consular</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
@@ -176,7 +172,6 @@
         <!-- sidebar-wrapper -->
         <main class="page-content">
             <div id="contenedorEntradas" class="container-fluid">
-                <h1>hola</h1>
             
     <!-- page-content"-->
 

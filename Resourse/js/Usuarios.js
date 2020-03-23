@@ -34,3 +34,7 @@ class Usuarios{
         
     }
 }
+
+$(document).ready(function() {
+    
+});

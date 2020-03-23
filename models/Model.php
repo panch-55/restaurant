@@ -9,6 +9,7 @@ abstract class Model {
 	private static $db_charset = 'utf8';
 	private $conn;
 	protected $query;
+	protected $lastId = array();
 	protected $rows = array();
 
 	//Métodos abstractos
@@ -39,7 +40,10 @@ abstract class Model {
 	protected function set_query() {
 		$this->db_open();
 		$result = $this->conn->query($this->query);
+		$result = $this->conn->query("SELECT LAST_INSERT_ID();");
+		while( $this->lastId[] = $result->fetch_assoc() );
 		$this->db_close();
+		return array_pop($this->lastId);
 	}
 
 	//obtener datos de un query (SELECT)

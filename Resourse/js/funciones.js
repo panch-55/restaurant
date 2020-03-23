@@ -6,3 +6,6 @@ var validarEmail =(email)=>{
         return false
     }
 }
+
+
+

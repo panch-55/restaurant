@@ -28,8 +28,8 @@ class Router
                 case 'tables':  
                     $viewController->loadView('tables');
                     break;
-                    case 'movieseries':
-                        $viewController->loadView('movieseries');
+                    case 'pedidos':
+                        $viewController->loadView('pedidos');
                         break;
                         case 'usuarios':
                             //$viewController->loadView('usuarios');

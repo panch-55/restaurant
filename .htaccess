@@ -4,7 +4,7 @@ Options +FollowSymlinks
 
 RewriteEngine on
 
-RewriteBase /youtube-poo-php-mysql-master/Mexflix_1.0
+RewriteBase /restaurant
 
 RewriteCond %{REQUEST_FILENAME} !-d
 
