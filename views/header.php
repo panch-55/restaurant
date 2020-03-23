@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie-edge">
 
-    <!--<script src="js/jquery-3.3.1.slim.min.js" ></script>-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <script src="./Resourse/js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
 
     <title>RESTAURANT BAR</title>
     <link rel="shortcut icon" type="image/png" href="./public/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
@@ -25,22 +23,10 @@
     <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
-    <script src="./Resourse/js/jquery-3.4.1.min.js" type="text/javascript"></script>
-    <script src="./Resourse/js/jquery.validate.js" type="text/javascript"></script>
-    <script src="./Resourse/js/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="./Resourse/js/funciones.js" type="text/javascript"></script>
-    <script src="./Resourse/js/Usuarios.js" type="text/javascript"></script>
-    <script src="./Resourse/js/app.js" type="text/javascript"></script>
-
-    <link rel="stylesheet" href="./Resourse/css/custom.css">
-    <link rel="stylesheet" href="./Resourse/css/custom-themes.css">
-    <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/custom.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./Resourse/css/tables.css">
-    <script src="./Resourse/js/tables.js"></script>
+    <script src="./Resourse/js/tables.js" type="text/javascript"></script>
 
-    <script src="Resourse/materialize/js/materialize.min.js" type="text/javascript"></script>
     <!--<link rel="stylesheet" type="text/css" href="Resourse/materialize/css/materialize.min.css">-->
 
 
@@ -53,6 +39,8 @@
             margin-top: 40px;
         }
     </style>
+
+
 </head>
 
 <body>
@@ -89,9 +77,9 @@
                     <div class="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="#" id="home">
+                                <a href="tables" id="home">
                                     <i class="fas fa-home"></i>
-                                    <span>Home</span>
+                                    <span>Mesas</span>
                                 </a>
                             </li>
                             <li class="header-menu">

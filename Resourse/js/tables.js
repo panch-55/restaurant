@@ -1,18 +1,38 @@
 $(document).ready(function() {
+
     loadtables();
 
     $(".mesa").click(function() {
         var mesaId = $(this).attr("id");
-        alert(id);
+        alert(mesaId);
+        getExport();
+
+        /* param = {
+            "medaId": mesaId
+        };
 
         $.ajax({
-            type: "POST",
-            url: "pedidos.php",
-            data: mesaId,
-            dataType: "String"
+            data: param,
+            url: "pedidos",
+            type: "post",
         });
 
-        window.location.href = "pedidos";
+        document.location.href = "pedidos"; */
+
+        function getExport() {
+            var body = document.body;
+            form = document.createElement('form');
+            form.method = 'POST';
+            form.action = window.location.href = 'pedidos';
+            form.name = 'jsform';
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'mesaId';
+            input.value = mesaId;
+            form.appendChild(input);
+            body.appendChild(form);
+            form.submit();
+        }
 
 
 
