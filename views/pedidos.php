@@ -1,34 +1,40 @@
+<script>
+
+  </script>
+
 <div class="row">
-  <div class="col-sm-4">
-    <div class="card">
+  <div id="comida" class="col-sm-4 ">
+    <div class="card alert-warning">
       <div class="card-body">
-        <h5 class="card-title">Comidas</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="alert-heading">Comidas</h4>
+        <p class="card-text">Haz click para desplegar el menu de la comida.</p>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card">
+  <div id="vevida" class="col-sm-4">
+    <div class="card alert-primary">
       <div class="card-body">
-        <h5 class="card-title">Vevidas</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="alert-heading">Vevidas</h4>
+        <p class="card-text">Haz click para desplegar el menu de las vevidas.</p>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card">
+  <div id="postre" class="col-sm-4">
+    <div class="card alert-success">
       <div class="card-body">
-        <h5 class="card-title">Postres</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="alert-heading">Postres</h4>
+        <p class="card-text">Haz click para desplegar el menu de los postres.</p>
       </div>
     </div>
   </div>
+</div>
+<div id="agregarProducto">
 </div>
 
 
 <?php
 
-if (isset($_POST['mesaId'])) {
+/*if (!isset($_POST['mesaId'])) {
   $mesaId = $_POST['mesaId'];
   $pedidosController = new PedidosController();
   $pedido_data = array(
@@ -38,7 +44,11 @@ if (isset($_POST['mesaId'])) {
     'total' =>  0,
   );
   $newPedido = $pedidosController->set($pedido_data);
+  
+  foreach($newPedido as $index => $value){
+    $lastId = $value['lastId'];
+  }
+  
+}*/
 
-  print_r($newPedido);
-}
 ?>

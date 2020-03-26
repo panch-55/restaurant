@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     $(".mesa").click(function() {
         var mesaId = $(this).attr("id");
-        alert(mesaId);
+
         getExport();
 
         /* param = {
@@ -36,6 +36,13 @@ $(document).ready(function() {
 
 
 
+    });
+
+    $('#vevida').click(function() {
+        alert("bevida");
+    });
+    $('#postre').click(function() {
+        alert("postre");
     });
 
 });

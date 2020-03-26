@@ -2,7 +2,7 @@
 //Clase Abstracta que nos permitirá conectarnos a MySQL
 abstract class Model {
 	//Atributos
-	private static $db_host = '192.168.1.67';
+	private static $db_host = '192.168.1.68';
 	private static $db_user = 'root';
 	private static $db_pass = '1234';
 	private static $db_name = 'db_restaurant';
@@ -40,7 +40,7 @@ abstract class Model {
 	protected function set_query() {
 		$this->db_open();
 		$result = $this->conn->query($this->query);
-		$result = $this->conn->query("SELECT LAST_INSERT_ID();");
+		$result = $this->conn->query("SELECT LAST_INSERT_ID() as lastId;");
 		while( $this->lastId[] = $result->fetch_assoc() );
 		$this->db_close();
 		return array_pop($this->lastId);
