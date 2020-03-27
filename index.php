@@ -1,6 +1,6 @@
 <?php
 
-require_once('./controllers/autoload.php');
+    require './controllers/autoload.php';
 
     $autoload = new autoload();
 

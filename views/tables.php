@@ -1,8 +1,24 @@
 <?php
 
+//require_once("ajax/MesasAjax.php");
+
 $mesas = new MesasController();
 
 $mesasDatos = $mesas->get();
+
+/* class MesasAjax
+{
+    public function getHoraUso() {
+        $controller = new MesasController();
+        $respuesta = $controller->getHoraUso();
+        return $respuesta;
+    }
+}
+
+if(isset($_POST["dato"])){
+    $MesasAjaxA = new MesasAjax;
+    $MesasAjaxA->getHoraUso();
+ } */
 
 ?>
 
@@ -12,9 +28,9 @@ $mesasDatos = $mesas->get();
         <?php
         foreach ($mesasDatos as $key) {
         ?>
-            <div class="col mb-4 mesa" id="<?php echo $key['mesaId']; ?>">
+            <div class="col col-md-6 col-lg-4 mb-4 mesa" id="<?php echo "mesaId".$key['mesaId']; ?>">
                 <div class="card h-100">
-                    <span class="cirle-notification">00:10</span>
+                    <span class="cirle-notification"></span>
                     <h4 class="card-title">
                         <?php
                         echo 'Mesa ' . $key['numeroMesa'];

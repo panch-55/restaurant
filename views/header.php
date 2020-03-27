@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie-edge">
 
-    <script src="./Resourse/js/jquery-3.4.1.min.js"></script>
+    <script src="./Resourse/js/jquery-3.4.1.min.js" type="text/javascript"></script>
     <!-- <script src="js/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./Resourse/css/tables.css">
-    <script src="./Resourse/js/tables.js" type="text/javascript"></script>
+    
 
     <!--<link rel="stylesheet" type="text/css" href="Resourse/materialize/css/materialize.min.css">-->
 
@@ -45,6 +45,10 @@
 
 <body>
     <?php
+     if(isset($_POST["dato"])){
+        echo "Hola";
+     }
+
     if ($_SESSION['iniciada']) {
     ?>
 

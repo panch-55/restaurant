@@ -1,8 +1,9 @@
-<?php 
+<?php
 //Clase Abstracta que nos permitirá conectarnos a MySQL
-abstract class Model {
+abstract class Model
+{
 	//Atributos
-	private static $db_host = '192.168.1.67';
+	private static $db_host = '192.168.1.68';
 	private static $db_user = 'root';
 	private static $db_pass = '1234';
 	private static $db_name = 'db_restaurant';
@@ -18,7 +19,8 @@ abstract class Model {
 	abstract protected function del();
 
 	//método privado para conectarse a la base de datos
-	private function db_open() {
+	private function db_open()
+	{
 
 		$this->conn = new mysqli(
 			self::$db_host,
@@ -31,27 +33,33 @@ abstract class Model {
 	}
 
 	//método privado para desconectarse de la base de datos
-	private function db_close() {
+	private function db_close()
+	{
 
 		$this->conn->close();
 	}
 
 	//establecer un query que afecte datos (INSERT, DELETE o UPDATE)
-	protected function set_query() {
+	protected function set_query()
+	{
 		$this->db_open();
 		$result = $this->conn->query($this->query);
 		$result = $this->conn->query("SELECT LAST_INSERT_ID();");
-		while( $this->lastId[] = $result->fetch_assoc() );
+		while ($this->lastId[] = $result->fetch_assoc());
 		$this->db_close();
 		return array_pop($this->lastId);
 	}
 
 	//obtener datos de un query (SELECT)
-	protected function get_query() {
+	protected function get_query()
+	{
+		//$this->rows = array();
+		
 		$this->db_open();
 
 		$result = $this->conn->query($this->query);
-		while( $this->rows[] = $result->fetch_assoc() );
+		
+		while ($this->rows[] = $result->fetch_assoc());
 		$result->close();
 
 		$this->db_close();
