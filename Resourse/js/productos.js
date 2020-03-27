@@ -1,26 +1,20 @@
 $(document).ready(function () {
     
     $('#comida').click(function () {
-
         $("#agregarProducto").load('./views/comida.php');
-
     });
 
     $('#postre').click(function () {
-
         $("#agregarProducto").load('./views/postre.php');
-
     });
   
     var arr = new Array();
   
     $('#comida').click(function () {
-  
-  $("#agregarProducto").load('./views/comida.php');
-  
-  });
-    $(document).on("click", '#btn_e', function() {
-     
+        $("#agregarProducto").load('./views/comida.php');
+    });
+
+    $(document).on("click", '#btn_e', function() { 
      //obtenemos los valores de los inputs
      var materialId = $('#material').val(); 
      var tipoId = $('#tipo').val();
@@ -28,21 +22,12 @@ $(document).ready(function () {
      var descripcionComida = $('#material option:selected').text();
      var descripcionTipo = $('#tipo option:selected').text();
   
-    arr.push( 
-       materialId
-       ,tipoId
-       ,cantidad
-       ,descripcionComida
-       ,descripcionTipo 
-       );
-  
        //unset($_SESSION['counter']);
              
               // Obtenemos el total de renglones (tr) del id "tabla"
               var trs=$("#tablaEntradas tr").length;
   
              // var buttonWarning = '<input class="btn btn-warning" type="button" value="Editar" id="editarMaterial"/>';
-              
               var buttonDanger = '<input class="btn btn-warning btn-sm" type="button" value="Eliminar" id="deleteMaterial"/>';
   
               var nuevaFila= '<tr>'+'<td>'+trs+'</td>'+'<td hidden="">'+materialId+'</td>'
@@ -51,16 +36,35 @@ $(document).ready(function () {
               
               //agregamos a la tabla una nueva fila
               $("#tablaEntradas").append(nuevaFila);
-  
+            
+             /* arr.push( 
+                arr.materialId = materialId
+                ,arr.tipoId = tipoId
+                ,arr.cantidad = cantidad
+                ,arr.descripcionComida = descripcionComida
+                ,arr.descripcionTipo  = descripcionComida
+                );*/    
+
+                console.log(arr);
+                
+                var myJSON = {"materialId": materialId, "tipoId": tipoId
+                ,"cantidad":cantidad,"descripcionComida":descripcionComida
+                ,"descripcionTipo":descripcionTipo};
+                
               var detPedido = {
-                json:"hola desde Ajax"
+                json: myJSON
               };
   
            $.ajax({
                type: 'POST',
                data: detPedido,
                url: './views/comida.php',
-               
+               beforeSend: function () {
+                $("#Respuesta").html("Validando datos, espere por favor...");
+                },
+                success:  function (response) {
+                $("#Respuesta").html(response);
+                   }
            });
     
     });

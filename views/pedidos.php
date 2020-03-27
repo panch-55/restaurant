@@ -1,6 +1,3 @@
-<script>
-
-  </script>
 
 <div class="row">
   <div id="comida" class="col-sm-4 ">
